@@ -1,0 +1,25 @@
+Draft Geomedian WYDY statistics workflow:
+
+example folder: 
+
+/g/data/r78/rjd547/groundwater_activities/scripts/East_Kimberley/WYDY_dy
+
+-generate polygons of common driest year using Rainfall_Dry_Year_Over_Region_070817
+-took output shapefile into QGIS checked attribute table
+-find wettest and driest 5% of years and add to polygon information using Regional_Wettest_Driest_070817
+-check attribute table to get polygon IDs
+
+Raijin:
+-get agdc-statistics
+-get a yaml file (?)
+-modify agdc-statistics/configurations/yaml file
+
+Check PYTHONPATH in wetdry_env.sh
+Edit source line to current environment
+ and cd to current agdc_statistics dir
+edit polyIDS.txt to the correct number of polygons
+edit qsub path and make sure you didn't break it (bex.sh)
+edit agdc_statistics/configurations/poly_wet_bex.yaml
+change output location for netcdf files
+change input file for polygons
+
